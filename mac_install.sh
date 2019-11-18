@@ -3,13 +3,29 @@
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Java 8
+brew tap AdoptOpenJDK/openjdk
+brew cask install adoptopenjdk8
+
 # Install brew-able packages
 brew install fzf wget hub the_silver_searcher tmux pandoc node jq
 brew install tree xsv ripgrep rclone pv micro watchman cocoapods coreutils yarn
 
-# Java 8
-brew tap AdoptOpenJDK/openjdk
-brew cask install adoptopenjdk8
+# Note that very many binary packages are available through brew casks
+brew install openrct2 qgis slack spotify spotify-notifications chromedriver
+brew install exiftool google-chrome chrome-cli selfcontrol
+brew install google-earth-pro firefox xquartz virtualbox osxfuse
+brew install docker docker-compose docker-machine docker-completion
+brew install atom visual-studio-code iterm2 keybase
+brew install mactex alacritty
+brew install 1password 1password-cli
+
+brew install postman gpsbabel josm caprine bat artpip gifski
+brew install react-native-cli react-native-debugger reactotron
+
+# Utilities
+brew install direnv shellcheck
+
 
 # Download my dotfiles
 git clone https://github.com/kylebarron/dotfiles.git /tmp/dotfiles
@@ -68,17 +84,7 @@ mkdir -p ~/.config/yapf/
 cp /tmp/dotfiles/yapf/yapf.py ~/.config/yapf/style
 
 
-# QGIS
-# TODO
-
-
 ### Utilities
-
-if [[ $direnv = 'True' ]]; then
-    link="$(curl -s https://api.github.com/repos/direnv/direnv/releases/latest | grep 'browser_download_url' | grep 'linux-amd64' | cut -d '"' -f 4)"
-    wget $link -O ~/local/bin/direnv
-    chmod +x ~/local/bin/direnv
-fi
 
 if [[ $gtop = 'True' ]]; then
     if [[ $sudo = 'True' ]]; then
@@ -96,14 +102,6 @@ if [[ $peek = 'True' ]]; then
         sudo apt install -y peek
     else
         sudo_not_installed+=$'- Peek\n'
-    fi
-fi
-
-if [[ $shellcheck = 'True' ]]; then
-    if [[ $sudo = 'True' ]]; then
-        sudo apt install -y shellcheck
-    else
-        sudo_not_installed+=$'- shellcheck\n'
     fi
 fi
 
