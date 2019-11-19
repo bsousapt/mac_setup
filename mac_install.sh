@@ -1,5 +1,8 @@
 #! /usr/bin/env bash
 
+# Install Xcode command line tools
+xcode-select --install
+
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -10,22 +13,20 @@ brew cask install adoptopenjdk8
 # Install brew-able packages
 brew install fzf wget hub the_silver_searcher tmux pandoc node jq
 brew install tree xsv ripgrep rclone pv micro watchman cocoapods coreutils yarn
+brew install exiftool chrome-cli gpsbabel bat gifski
+brew install react-native-cli direnv shellcheck
 
 # Note that very many binary packages are available through brew casks
-brew install openrct2 qgis slack spotify spotify-notifications chromedriver
-brew install exiftool google-chrome chrome-cli selfcontrol
-brew install google-earth-pro firefox xquartz virtualbox osxfuse
-brew install docker docker-compose docker-machine docker-completion
-brew install atom visual-studio-code iterm2 keybase
-brew install mactex alacritty
-brew install 1password 1password-cli
-
-brew install postman gpsbabel josm caprine bat artpip gifski
-brew install react-native-cli react-native-debugger reactotron
-
-# Utilities
-brew install direnv shellcheck
-
+brew cask install openrct2 qgis slack spotify spotify-notifications chromedriver
+brew cask install google-chrome selfcontrol
+brew cask install google-earth-pro firefox xquartz virtualbox osxfuse
+brew cask install docker 
+brew install docker-compose docker-machine docker-completion
+brew cask install atom visual-studio-code iterm2 keybase
+brew cask install mactex alacritty
+brew cask install 1password 1password-cli
+brew cask install postman josm caprine artpip 
+brew cask install react-native-debugger reactotron
 
 # Download my dotfiles
 git clone https://github.com/kylebarron/dotfiles.git /tmp/dotfiles
