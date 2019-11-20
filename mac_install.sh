@@ -14,7 +14,7 @@ brew cask install adoptopenjdk8
 brew install fzf wget hub the_silver_searcher tmux pandoc node jq
 brew install tree xsv ripgrep rclone pv micro watchman cocoapods coreutils yarn
 brew install exiftool chrome-cli gpsbabel bat gifski
-brew install react-native-cli direnv shellcheck go
+brew install react-native-cli direnv shellcheck
 
 # Note that very many binary packages are available through brew casks
 brew cask install openrct2 qgis slack spotify spotify-notifications chromedriver
@@ -62,6 +62,9 @@ wget $url -O /tmp/anaconda3.sh
 bash /tmp/anaconda3.sh -b -p ~/local/anaconda3
 export PATH=$HOME/local/anaconda3/bin:$PATH
 # rm ~/local/anaconda3/bin/curl
+
+# Atom config
+mv /tmp/dotfiles/atom ~/.atom
 
 # Miniconda
 # wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda3.sh
