@@ -14,7 +14,7 @@ brew cask install adoptopenjdk8
 brew install fzf wget hub the_silver_searcher tmux pandoc node jq
 brew install tree xsv ripgrep rclone pv micro watchman cocoapods coreutils yarn
 brew install exiftool chrome-cli gpsbabel bat gifski
-brew install react-native-cli direnv shellcheck
+brew install react-native-cli direnv shellcheck go
 
 # Note that very many binary packages are available through brew casks
 brew cask install openrct2 qgis slack spotify spotify-notifications chromedriver
